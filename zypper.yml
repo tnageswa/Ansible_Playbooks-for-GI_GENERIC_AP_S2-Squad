@@ -1,6 +1,6 @@
 ---
  - name: update SUSE patches
-   hosts: suse
+   hosts: all
    remote_user: ansadmin
    become: yes
    tasks:
