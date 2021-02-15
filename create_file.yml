@@ -1,12 +1,17 @@
 ---
 - name: update SUSE patches
+  user: ansadmin
   hosts: all
-  remote_user: ansadmin
-  become: true
-  become_method: sudo
-   tasks:
+    tasks:
    - name: Create a file
+   become: yes
      file:
       path: /etc/zypp/file1
       state: touch
       mode: '0644'
+      
+      
+      
+      
+      
+    
