@@ -1,7 +1,6 @@
 ---
  - name: update SUSE patches
    hosts: all
-   user: ansadmin
    become: yes
    tasks:
    - name: Create a file
