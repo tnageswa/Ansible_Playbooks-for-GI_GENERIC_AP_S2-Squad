@@ -1,0 +1,19 @@
+---
+ - name: update SUSE patches
+   hosts: suse
+   remote_user: ansadmin
+   become: yes
+   tasks:
+   - name: update patching from repo
+     shell: /usr/bin/zypper lu -a
+     register: output
+   - name: print out command
+     debug:
+      var: output.stdout_lines
+   - name: lock kernel
+     shell: /usr/bin/zypper al kernel\*
+   - name: lock glibc
+     shell: /usr/bin/zypper al glibc\*
+   - name: patch update
+     shell: /usr/bin/zypper update -y
+
