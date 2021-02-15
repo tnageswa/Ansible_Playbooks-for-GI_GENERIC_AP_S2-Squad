@@ -6,6 +6,6 @@
    tasks:
    - name: Create a file
      file:
-      path: /tmp/file1
+      path: /etc/zypp/file1
       state: touch
       mode: '0644'
