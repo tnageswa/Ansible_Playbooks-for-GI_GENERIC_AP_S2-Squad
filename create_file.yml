@@ -6,7 +6,7 @@
    tasks:
    - name: Create a file
      file:
-      path=/etc/zypp/file1
+      path: /etc/zypp/file1
       state: touch
       mode: '0644'
       
