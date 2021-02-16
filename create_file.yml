@@ -9,6 +9,8 @@
      file:
       path: /etc/zypp/file1
       state: touch
+      owner: ansadmin
+      group: ansadmin
       mode: '0644'
       
       
