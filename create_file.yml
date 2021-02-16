@@ -1,17 +1,12 @@
 ---
- - name: update SUSE patches
-   hosts: all
-   become: yes
-   become_user: ansadmin
-   any_errors_fatal: false
-   tasks:
-   - name: Create a file
-     file:
-      path: /etc/zypp/file1
+- hosts: all
+  tasks:
+  - name: Creating an empty file
+    file:
+      path: "/etc/zypp/file1"
       state: touch
-      owner: ansadmin
-      group: ansadmin
-      mode: '0644'
+      become: yes
+      mode: 0644
       
       
       
