@@ -1,11 +1,15 @@
 ---
-- hosts: all
+name: testing
+  hosts: all
+  user: ansadmin
   tasks:
   - name: Creating an empty file
     file:
       path: "/etc/zypp/file1"
       state: touch
       become: yes
+      owner: ansadmin
+      group: ansadmin
       mode: 0644
       
       
