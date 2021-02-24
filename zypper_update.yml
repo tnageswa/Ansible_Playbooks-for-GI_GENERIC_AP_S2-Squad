@@ -1,6 +1,7 @@
 ---
  - name: update SUSE patches
    hosts: all
+   become: true
    tasks:
    - name: update patching from repo
      shell: /usr/bin/zypper lu -a
